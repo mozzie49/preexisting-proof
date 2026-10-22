@@ -1,0 +1,33 @@
+{
+  "fixture": "305 -> 304 actually executed synthetic unittest checks; five failures in both runs",
+  "baseline_count_only_new_failures": 0,
+  "baseline_failed_id_set_new_failures": 3,
+  "signature_aware_new_or_changed": 4,
+  "lost_verification_detected": 2,
+  "expected_categories": {
+    "new_failure": 3,
+    "changed_failure": 1,
+    "same_failure_observed_before": 1,
+    "now_passing": 1,
+    "skipped_not_verified": 1,
+    "missing_not_verified": 1
+  },
+  "observed_categories": {
+    "changed_failure": 1,
+    "new_failure": 3,
+    "now_passing": 1,
+    "same_failure_observed_before": 1,
+    "missing_not_verified": 1,
+    "skipped_not_verified": 1
+  },
+  "raw_report_bytes": 339502,
+  "compact_handoff_bytes": 1122,
+  "handoff_byte_reduction_percent": 99.67,
+  "comparison_test_reruns": 0,
+  "limitations": [
+    "Synthetic fixture, not user field validation",
+    "Byte reduction, not tokens or wall-time savings",
+    "No agent A/B trial; simple scripted baselines",
+    "Environment labels are declarations"
+  ]
+}

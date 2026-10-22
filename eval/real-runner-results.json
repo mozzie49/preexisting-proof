@@ -1,0 +1,79 @@
+{
+  "kind": "real runner / real repository / controlled injected faults",
+  "project": "equation-rescue",
+  "revision": "c7e84008b356a8d741eda154beeea5028e1bf095",
+  "node": "24.19.0",
+  "vitest": "4.1.11",
+  "test_scope": "tests/math.test.ts",
+  "command": [
+    "npm",
+    "test",
+    "--",
+    "tests/math.test.ts",
+    "--reporter=junit",
+    "--outputFile={junit}"
+  ],
+  "results": [
+    {
+      "before": "clean",
+      "after": "injected-wrong-entity",
+      "comparable": true,
+      "before_counts": {
+        "pass": 29
+      },
+      "after_counts": {
+        "pass": 28,
+        "failure": 1
+      },
+      "categories": {
+        "new_failure": 1
+      },
+      "command_environment_scope_matched": true,
+      "sources_stable_during_each_run": true
+    },
+    {
+      "before": "injected-wrong-entity",
+      "after": "injected-double-escape",
+      "comparable": true,
+      "before_counts": {
+        "pass": 28,
+        "failure": 1
+      },
+      "after_counts": {
+        "pass": 28,
+        "failure": 1
+      },
+      "categories": {
+        "changed_failure": 1
+      },
+      "command_environment_scope_matched": true,
+      "sources_stable_during_each_run": true
+    },
+    {
+      "before": "injected-double-escape",
+      "after": "restored",
+      "comparable": true,
+      "before_counts": {
+        "pass": 28,
+        "failure": 1
+      },
+      "after_counts": {
+        "pass": 29
+      },
+      "categories": {
+        "now_passing": 1
+      },
+      "command_environment_scope_matched": true,
+      "sources_stable_during_each_run": true
+    }
+  ],
+  "original_checkout_unchanged": true,
+  "isolated_copy_restored": true,
+  "raw_artifacts_in_release": false,
+  "limits": [
+    "Injected faults, not naturally occurring user failures",
+    "Only 29 math tests; no full suite/build/UI claim",
+    "Environment labels are declarations; source states and output hashes are verified",
+    "No causal-attribution claim from the tool"
+  ]
+}
